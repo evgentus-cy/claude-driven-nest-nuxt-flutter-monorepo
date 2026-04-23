@@ -66,7 +66,6 @@ services:
 
   otel-lgtm:
     image: grafana/otel-lgtm:0.8.1
-    container_name: "{{APP_SLUG}}-otel-lgtm-1"
     restart: unless-stopped
     ports:
       - "3200:3000" # Grafana UI

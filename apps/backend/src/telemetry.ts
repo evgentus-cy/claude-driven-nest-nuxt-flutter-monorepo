@@ -40,7 +40,7 @@ export function initTelemetry(): void {
         '@opentelemetry/instrumentation-fs': { enabled: false },
       }),
     ],
-  }) as unknown as OtelSdk;
+  });
 
   sdk.start();
 }

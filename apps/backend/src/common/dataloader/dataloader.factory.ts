@@ -9,7 +9,7 @@ export class DataLoaderFactory implements IDataLoaderFactory {
 
   get<K, V>(loaderKey: string, batchFn: BatchLoadFn<K, V>): DataLoader<K, V> {
     if (!this.loaders.has(loaderKey)) {
-      this.loaders.set(loaderKey, new DataLoader<K, V>(batchFn) as DataLoader<unknown, unknown>);
+      this.loaders.set(loaderKey, new DataLoader<K, V>(batchFn));
     }
     return this.loaders.get(loaderKey) as DataLoader<K, V>;
   }
