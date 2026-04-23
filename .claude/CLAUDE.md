@@ -12,7 +12,7 @@ packages/specs  OpenAPI 3.1 + AsyncAPI 3.0 — single source of API truth
 packages/ui     brand component library + colocated Storybook + stories
 packages/api-client-{ts,dart}   generated clients — never edit by hand
 specs/tasks/    active.md (LIFO stack) + done.md (archive)
-specs/design/   tokens JSON + JSX mockups (primary design reference)
+specs/design/   tokens JSON + optional JSX mockups under mockups/ (primary design reference when provided)
 docker/         local stack (postgres 18.1, redis 8.6, centrifugo v6)
 ```
 
