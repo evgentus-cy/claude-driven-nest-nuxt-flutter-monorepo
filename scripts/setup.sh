@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "=== Boilerplate Project Setup ==="
+echo ""
+
+read -p "App name (e.g. 'My SaaS'): " APP_NAME
+read -p "App slug — lowercase, hyphens only (e.g. 'my-saas'): " APP_SLUG
+read -p "Short description: " APP_DESCRIPTION
+
+echo ""
+echo "Setting up: $APP_NAME ($APP_SLUG)"
+echo ""
+
+# Replace placeholders throughout the repo
+find . -type f \( -name "*.json" -o -name "*.yaml" -o -name "*.yml" -o -name "*.md" -o -name "*.ts" -o -name "*.vue" -o -name "*.sh" \) \
+  ! -path "*/node_modules/*" \
+  ! -path "*/.git/*" \
+  ! -path "*/dist/*" \
+  ! -path "*/*.generated.*" \
+  -exec sed -i '' \
+    -e "s|{{APP_NAME}}|$APP_NAME|g" \
+    -e "s|{{APP_SLUG}}|$APP_SLUG|g" \
+    -e "s|{{APP_DESCRIPTION}}|$APP_DESCRIPTION|g" \
+    {} \;
+
+echo "✓ Replaced placeholders"
+echo ""
+echo "Next steps:"
+echo "  1. pnpm install"
+echo "  2. Add your design tokens to specs/design/tokens/ (see specs/design/README.md)"
+echo "  3. pnpm design:build"
+echo "  4. docker compose -f docker/compose.yml up -d"
+echo "  5. Open a Claude session and say: 'Read CLAUDE.md and help me build [your first feature]'"
+echo ""
+echo "=== Setup complete! ==="

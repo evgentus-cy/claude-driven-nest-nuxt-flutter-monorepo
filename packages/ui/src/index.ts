@@ -8,3 +8,4 @@ export { AppBadge } from './components/AppBadge';
 export { AppChip } from './components/AppChip';
 export { AppSwitch } from './components/AppSwitch';
 export { AppLabel } from './components/AppLabel';
+export { AppField } from './components/AppField';
