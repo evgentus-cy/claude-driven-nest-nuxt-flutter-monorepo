@@ -35,9 +35,19 @@ All generated files are committed — never edit them by hand. Run
 
 ## Component inventory
 
-| Category     | Component      | Vue (`@app/ui`) | Flutter (`app_ui`) |
-| ------------ | -------------- | --------------- | ------------------ |
-| _(add rows)_ | _(add rows)_   | —               | —                  |
+| Category | Component       | Vue (`@app/ui`) | Flutter (`app_ui`) |
+| -------- | --------------- | --------------- | ------------------ |
+| Feedback | `AppBadge`      | ✓               | —                  |
+| Forms    | `AppButton`     | ✓               | —                  |
+| Surface  | `AppCard`       | ✓               | —                  |
+| Feedback | `AppChip`       | ✓               | —                  |
+| Forms    | `AppField`      | ✓               | —                  |
+| Media    | `AppIcon`       | ✓               | —                  |
+| Forms    | `AppInput`      | ✓               | —                  |
+| Forms    | `AppLabel`      | ✓               | —                  |
+| Forms    | `AppSelect`     | ✓               | —                  |
+| Forms    | `AppSwitch`     | ✓               | —                  |
+| Forms    | `AppTextarea`   | ✓               | —                  |
 
 > The `pnpm design:audit` script cross-checks this table against the actual
 > component folders. Run it before shipping new components.

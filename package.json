@@ -29,8 +29,7 @@
     "storybook": "pnpm --filter @app/ui storybook",
     "storybook:build": "pnpm --filter @app/ui storybook:build",
     "prepare": "husky",
-    "i18n:check": "pnpm --filter @app/backend exec tsx ../../scripts/check-i18n-parity.ts",
-    "check:i18n": "tsx scripts/check-i18n-parity.ts"
+    "check:i18n": "node --experimental-strip-types scripts/check-i18n-parity.ts"
   },
   "devDependencies": {
     "@app/eslint-config": "workspace:*",

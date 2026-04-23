@@ -41,6 +41,9 @@ packages/ui_flutter/pubspec.lock
 
 # generated API clients are CHECKED IN (regenerated via `pnpm spec:codegen`,
 # never hand-edited — see CLAUDE.md). Reviewable as part of the spec PR.
+# Exception: the dart-dio generator's FILES manifest is non-idempotent
+# across runs, so we gitignore it to keep the codegen-drift CI guard reliable.
+packages/api-client-dart/lib/generated/.openapi-generator/FILES
 
 # specs bundle artifact (regenerated)
 packages/specs/dist
