@@ -24,6 +24,14 @@ find . -type f \( -name "*.json" -o -name "*.yaml" -o -name "*.yml" -o -name "*.
     -e "s|{{APP_DESCRIPTION}}|$APP_DESCRIPTION|g" \
     {} \;
 
+# Vue-i18n JSON blocks can't contain `{{...}}` (that's Mustache-style
+# interpolation, and vue-i18n errors on a non-identifier inside the braces).
+# The template carries a literal sentinel `YourApp` in those blocks — replace
+# it only in the two Nuxt files that use it.
+sed -i '' "s|YourApp|$APP_NAME|g" \
+  apps/web/app/pages/index.vue \
+  apps/web/app/layouts/default.vue
+
 echo "✓ Replaced placeholders"
 echo ""
 echo "Next steps:"

@@ -5,10 +5,10 @@
 <i18n lang="json">
 {
   "en": {
-    "title": "Welcome to {{APP_NAME}}"
+    "title": "Welcome to YourApp"
   },
   "ru": {
-    "title": "Добро пожаловать в {{APP_NAME}}"
+    "title": "Добро пожаловать в YourApp"
   }
 }
 </i18n>

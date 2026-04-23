@@ -20,13 +20,13 @@
 <i18n lang="json">
 {
   "en": {
-    "appName": "{{APP_NAME}}",
+    "appName": "YourApp",
     "navHome": "Home",
     "navLogin": "Login",
     "navSignOut": "Sign out"
   },
   "ru": {
-    "appName": "{{APP_NAME}}",
+    "appName": "YourApp",
     "navHome": "Главная",
     "navLogin": "Войти",
     "navSignOut": "Выйти"
