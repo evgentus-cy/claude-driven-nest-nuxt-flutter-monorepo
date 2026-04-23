@@ -1,0 +1,58 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env", ".env.example", ".nvmrc", "tsconfig.base.json"],
+  "globalEnv": ["NODE_ENV"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build", "spec:codegen", "@app/design-tokens#build"],
+      "outputs": ["dist/**", ".output/**", ".nuxt/**", "build/**"],
+      "inputs": ["$TURBO_DEFAULT$", "!**/*.md"]
+    },
+    "dev": {
+      "dependsOn": ["^spec:codegen", "@app/design-tokens#build"],
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^spec:codegen", "@app/design-tokens#build"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^build", "spec:codegen", "@app/design-tokens#build"],
+      "outputs": ["coverage/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build", "spec:codegen", "@app/design-tokens#build"],
+      "outputs": ["*.tsbuildinfo"]
+    },
+    "audit:components": {
+      "cache": false,
+      "outputs": []
+    },
+    "spec:validate": {
+      "outputs": []
+    },
+    "spec:bundle": {
+      "dependsOn": ["spec:validate"],
+      "outputs": ["dist/**"]
+    },
+    "spec:codegen": {
+      "dependsOn": ["spec:bundle"],
+      "outputs": ["../api-client-ts/src/generated/**", "../api-client-dart/lib/generated/**"]
+    },
+    "spec:contract-test": {
+      "cache": false,
+      "dependsOn": ["spec:bundle"]
+    },
+    "@app/design-tokens#build": {
+      "inputs": ["src/**", "../../specs/design/tokens/**"],
+      "outputs": [
+        "../../apps/web/app/assets/css/tokens.generated.css",
+        "../../apps/web/app/design-tokens.generated.ts",
+        "../../packages/ui/src/tokens.generated.css",
+        "../../packages/ui/src/design-tokens.generated.ts",
+        "../../packages/ui_flutter/lib/src/theme/tokens.g.dart"
+      ]
+    }
+  }
+}
