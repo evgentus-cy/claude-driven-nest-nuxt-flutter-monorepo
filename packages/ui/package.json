@@ -55,7 +55,7 @@
     "@types/jest-image-snapshot": "^6.4.0",
     "@tailwindcss/vite": "^4.2.4",
     "@vitejs/plugin-vue": "^6.0.6",
-    "@vue/test-utils": "^2.4.6",
+    "@vue/test-utils": "^2.4.9",
     "@vue/tsconfig": "^0.9.1",
     "concurrently": "^9.1.0",
     "happy-dom": "^20.9.0",
