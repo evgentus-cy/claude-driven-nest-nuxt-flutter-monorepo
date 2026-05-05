@@ -19,16 +19,16 @@
     "@app/api-client-ts": "workspace:*",
     "@app/specs": "workspace:*",
     "@app/ui": "workspace:*",
-    "@nuxt/ui": "^4.6.0",
-    "@nuxtjs/i18n": "^10.2.4",
+    "@nuxt/ui": "^4.7.1",
+    "@nuxtjs/i18n": "^10.3.0",
     "@tailwindcss/vite": "^4.2.4",
-    "better-auth": "^1.6.8",
-    "nuxt": "^4.4.0",
+    "better-auth": "^1.6.9",
+    "nuxt": "^4.4.4",
     "tailwindcss": "^4.2.0",
     "vue": "^3.5.13",
-    "vue-i18n": "^11.3.2",
+    "vue-i18n": "^11.4.0",
     "vue-router": "^5.0.4",
-    "zod": "^4.3.6"
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@app/eslint-config": "workspace:*",
